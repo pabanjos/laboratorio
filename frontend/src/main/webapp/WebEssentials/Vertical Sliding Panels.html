@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <style type="text/css">
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:300);
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+h1, h2 {
+    margin: 0;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Josefin Sans';
+	overflow: auto;
+}
+h1, a {
+	text-transform: uppercase;
+	color: #f1f1f1;
+	text-decoration: none;
+}
+
+/* Panels Width */
+[class*='col-'] {
+    float: left;
+}
+.col-1-5 {
+    width: calc(100% * 1 / 5);
+}
+
+/* Side Bar */
+.sidebar {
+	height: 100%;
+	min-height: 100%;
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	background-color: #333;
+}
+
+/* Sliding Panels */
+.sliding-panels {
+	height: 100%;
+	position: fixed;
+	z-index: 1;
+	-webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.sliding-panels:hover {
+	opacity: 0.9;
+}
+.title {
+	text-align: center;
+	padding: 15% 5%;
+	font-weight: 300;
+}
+.panel1 {
+	left: calc(100% * 1 / 5);
+	background-color: #e74c3c;
+}
+.panel2 {
+	left: calc(100% * 2 / 5);
+	background-color: #9b59b6;
+}
+.panel3 {
+	left: calc(100% * 3 / 5);
+	background-color: #e67e22;
+}
+.panel4 {
+	left: calc(100% * 4 / 5);
+	background-color: #3498db;
+}
+.panel-active {
+	left: calc(100% * 1 / 5);
+}
+.panel-push-left {
+	left: 0;
+}
+.panel-push-right {
+	left: 100%;
+}
+  </style>
+
+</head>
+<body>
+
+	<!-- Side Bar -->
+  <section class="sidebar col-1-5">
+		<h1 class="title">Static Side Bar</h1>
+	</section>
+
+	<!-- Sliding Panels -->
+	<section>
+		<!-- Panel One -->
+		<a href="#" class="sliding-panels panel1 col-1-5" number="1">
+			<h1 class="title">Sliding Panel 1</h1>
+		</a>
+
+		<!-- Panel Two -->
+		<a href="#" class="sliding-panels panel2 col-1-5" number="2">
+			<h1 class="title">Sliding Panel 2</h1>
+		</a>
+
+		<!-- Panel Three -->
+		<a href="#" class="sliding-panels panel3 col-1-5" number="3">
+			<h1 class="title">Sliding Panel 3</h1>
+		</a>
+
+		<!-- Panel Four -->
+		<a href="#" class="sliding-panels panel4 col-1-5" number="4">
+			<h1 class="title">Sliding Panel 4</h1>
+		</a>
+	</section>
+	  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript">
+/* Panels Functionality */
+(function($) {
+	$(".sliding-panels").click(function() {
+	    
+	    var n = $(this).attr("number");
+	    var i, toggle_class;
+		
+		for (i = 1; i <= 4; ++i) {
+		    
+		    if (i == n) { 
+		    	toggle_class = "panel-active"; 
+		    }
+		    
+		    else if (i < n) { 
+		    	toggle_class = "panel-push-left"; 
+		    }
+
+		    else if (i > n) { 
+		    	toggle_class = "panel-push-right"; 
+		    }
+
+		    $(".panel" + i ).toggleClass(toggle_class);
+		}
+	})
+})(jQuery);
+
+/* Closing Panels */
+(function($) {
+	$(".close").click(function() {
+		$(".sliding-panels").removeClass("panel-push-left panel-push-right panel-active");
+		$( ".text" ).toggle();
+	})
+})(jQuery);
+
+  </script>
+</body>
+</html>

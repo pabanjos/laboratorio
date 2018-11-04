@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aplicação Web</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="refresh" content="30">
+	<meta name="description" content="web">
+	<meta name="author" content="Paulo Barcellos">
+	<meta name="contact" content="pabanjos@gmail.com">
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="icon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="css\style.css">
+	<link rel="stylesheet" href="css\forms.css">
+	<link rel="stylesheet" href="font-awesome-4.4.0\css\font-awesome.min.css">
+	<script type="text/javascript">
+		var s = 3;
+		function contar() {
+			if (s > 0) {
+				document.getElementById('saida').innerHTML = s;
+				setTimeout(contar, 1000);
+			} else {
+				document.getElementById('saida').style.display = 'none';
+			}
+			s--;
+		}
+	</script>
+</head>
+<body>
+	<div class="msg msg-green">
+		Cliente Cadastrado <i class="fa fa-exclamation"></i>
+	</div>
+
+	<header>
+	    <button class="pure-button pure-button-disabled">Disabled Button</button>
+		<button onclick="contar()" id="saida" class="pure-button">Button</button>
+		<button class="pure-button pure-button-primary">Primary Button</button>
+	    <button class="button-secondary pure-button">Secondary Button</button>
+	    <button class="button-success pure-button">Success Button</button>
+	    <button class="button-warning pure-button">Warning Button</button>
+	    <button class="button-error pure-button">Error Button</button>
+	</header>
+
+	<nav>
+		<a href="">MENU 1</a>
+		<a href="">MENU 2</a>
+		<a href="">MENU 3</a>
+		<a href="">MENU 4</a>
+		<details>
+			<summary>MENU</summary>
+				<a href="">SUB-MENU 1</a>
+				<a href="">SUB-MENU 2</a>
+		</details>
+	</nav>
+
+	<section>
+		<form class="pure-form" action="Controle" method="post">
+		    <label for="option-one" class="pure-checkbox">
+		        <input id="option-one" type="checkbox" value="...">
+		        Selecionar
+		    </label>
+
+		    <label for="Masculino" class="pure-radio">
+		        <input id="Masculino" type="radio" name="sexo" value="Masculino" checked>
+		        Masculino
+		    </label>
+
+		    <label for="Feminino" class="pure-radio">
+		        <input id="Feminino" type="radio" name="sexo" value="Feminino">
+		        Feminino
+		    </label>
+
+            <select id="estado" class="pure-input-1">
+                <option>RJ</option>
+                <option>SP</option>
+            </select>
+
+		    <fieldset class="pure-group">
+		        <input type="text" class="pure-input-1" placeholder="Username" required>
+		        <input type="password" class="pure-input-1" placeholder="Password" required>
+		    </fieldset>			   
+
+			<button type="submit" class="pure-button pure-input-1 pure-button-primary">
+				Entrar <i class="fa fa-sign-in"></i>
+		    </button>
+		</form>
+	</section>
+
+	<aside>
+		<div class="tabs">
+		   <div class="tab">
+		       <input type="radio" id="tab-1" name="tab-group-1" checked>
+		       <label for="tab-1">Tab 1</label>
+		       <div class="content">
+		           Texto 01
+		       </div>
+		   </div>
+		   <div class="tab">
+		       <input type="radio" id="tab-2" name="tab-group-1">
+		       <label for="tab-2">Tab 2</label>
+		       <div class="content">
+		           Texto 02
+		       </div>
+		   </div>
+		    <div class="tab">
+		       <input type="radio" id="tab-3" name="tab-group-1">
+		       <label for="tab-3">Tab 3</label>
+		       <div class="content">
+		           Texto 03
+		       </div>
+		   </div>
+		</div>
+	</aside>
+
+	<article>
+		<i class="fa fa-home fa-3x"></i>
+		<i class="fa fa-bars fa-3x"></i>
+		<i class="fa fa-envelope fa-3x"></i>
+		<i class="fa fa-phone fa-3x"></i>
+		<i class="fa fa-comment fa-3x"></i>
+		<i class="fa fa-search fa-3x"></i>
+		<br>
+		<i class="fa fa-user fa-3x"></i>
+		<i class="fa fa-user-plus fa-3x"></i>
+		<i class="fa fa-user-times fa-3x"></i>
+		<i class="fa fa-sign-in fa-3x"></i>
+		<i class="fa fa-sign-out fa-3x"></i>
+		<i class="fa fa-power-off fa-3x"></i>
+		<br>
+		<i class="fa fa-check fa-3x"></i>
+		<i class="fa fa-plus fa-3x"></i>
+		<i class="fa fa-minus fa-3x"></i>
+		<i class="fa fa-times fa-3x"></i>
+		<i class="fa fa-facebook fa-3x"></i>
+		<i class="fa fa-twitter fa-3x"></i>
+		<br>
+		<i class="fa fa-arrow-right fa-3x"></i>
+		<i class="fa fa-arrow-left fa-3x"></i>
+		<i class="fa fa-angle-right fa-3x"></i>
+		<i class="fa fa-angle-left fa-3x"></i>
+		<i class="fa fa-info-circle fa-3x"></i>
+		<i class="fa fa-question-circle fa-3x"></i>
+		<i class="fa fa-exclamation-circle fa-3x"></i>
+		<i class="fa fa-cog fa-3x"></i>
+		<br>
+		<i class="fa fa-list fa-3x"></i>
+		<i class="fa fa-table fa-3x"></i>
+		<i class="fa fa-sort fa-3x"></i>
+		<i class="fa fa-pencil fa-3x"></i>
+		<i class="fa fa-trash fa-3x"></i>
+		<br>
+		<i class="fa fa-clock-o fa-3x"></i>
+		<i class="fa fa-calendar fa-3x"></i>
+		<i class="fa fa-shopping-cart fa-3x"></i>
+		<i class="fa fa-tag fa-3x"></i>
+	</article>
+
+	<footer>
+		<table>
+			<thead>
+				<tr>
+					<th><i class="fa fa-table"></i></th>
+					<th><i class="fa fa-user"></i> Nome</th>
+					<th><i class="fa fa-envelope"></i> Email</th>
+					<th><i class="fa fa-venus-mars"></i> Sexo</th>
+					<th><i class="fa fa-calendar"></i> Data</th>
+					<th><i class="fa fa-phone"></i> Telefone</th>
+					<th><i class="fa fa-map-marker"></i> Endereço</th>
+					<th><i class="fa fa-cog"></i> Controle</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Paulo</td>
+					<td>pabanjos@gmail.com</td>
+					<td>masculino</td>
+					<td>30/12/2015</td>
+					<td>(21) 3285-9161</td>
+					<td>Emilia Ribeiro, 97</td>
+					<td>
+						<a href="#editar" class="button-secondary pure-button"><i class="fa fa-pencil"></i> Editar</a> 
+						<a href="#enviar" class="button-success pure-button"><i class="fa fa-envelope"></i> Mensagem</a> 
+						<a href="#tornar" class="button-warning pure-button"><i class="fa fa-key"></i> Tornar Administrador</a>
+						<a href="#deletar" class="button-error pure-button"><i class="fa fa-trash"></i> Deletar</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</footer>
+	
+	<div id="editar" class="fundo fade">
+		<div id="box">
+			<a href="#" class="close"><i class="fa fa-times fa-2x"></i></a>
+			<h2>Editar</h2>
+			<form class="pure-form pure-form-aligned" action="Controle?acao=atualizar" method="post">
+				<fieldset>
+					<div class="pure-control-group">
+						<label for="idCliente">idCliente</label> <input id="idCliente" type="text" name="idCliente" value="${cliente.idCliente}" disabled>
+					</div>
+
+					<div class="pure-control-group">
+						<label for="usuario">Usuario</label> <input id="usuario" type="text" name="usuario" value="${cliente.usuario}" required>
+					</div>
+
+					<div class="pure-control-group">
+						<label for="senha">Senha</label> <input id="senha" type="text" name="senha" value="${cliente.senha}" required>
+					</div>
+
+					<div class="pure-control-group">
+						<label for="nome">Nome</label> <input id="nome" type="text" name="nome" value="${cliente.nome}" required>
+					</div>
+
+					<div class="pure-control-group">
+						<label for="email">Email</label> <input id="email" type="email" name="email" value="${cliente.email}" required>
+					</div>
+
+					<div class="pure-control-group">
+						<label for="sexo" class="pure-radio">Sexo</label> <input id="Masculino" type="radio" name="sexo" value="Masculino" checked> Masculino
+						<input id="Feminino" type="radio" name="sexo" value="Feminino"> Feminino
+					</div>
+
+					<div class="pure-control-group">
+						<label for="telefone">Telefone</label> <input id="telefone" type="text" name="telefone" value="${cliente.telefone}" required>
+					</div>
+
+					<div class="pure-control-group">
+						<label for="endereco">Endereço</label> <input id="endereco" type="text" name="endereco" value="${cliente.endereco}" required>
+					</div>
+
+					<div class="pure-control-group">
+						<label for="data">Data</label> <input id="data" type="date" name="data" value="${cliente.data}" required>
+					</div>
+
+					<div class="pure-controls">
+						<button type="submit" class="pure-button-primary pure-button">Editar</button>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+
+	<div id="enviar" class="fundo">
+		<div id="box">
+			<a href="#" class="close"><i class="fa fa-times fa-2x"></i></a>
+			<h2>Enviar Mensagem</h2>
+			<form class="pure-form" action="Controle?acao=enviar" method="post">
+				<input class="pure-input-1" type="hidden" name="idCliente" value="${cliente.idCliente}">
+				<fieldset class="pure-group">
+					<textarea class="pure-input-1" placeholder="Mensagem.." name="mensagem"></textarea>
+				</fieldset>
+				<button type="submit" class="pure-button pure-input-1 pure-button-primary">Enviar</button>
+			</form>
+		</div>
+	</div>
+
+	<div id="tornar" class="fundo fade">
+		<div id="box">
+			<h2>Tornar o usuario '${cliente.usuario}' administrador <i class="fa fa-question"></i></h2>
+			<p>
+			<a href="Controle?acao=deletar&idCliente=${cliente.idCliente}" class="button-warning pure-button">Sim</a> <a href="#" class="pure-button">Não</a>
+			</p>
+		</div>
+	</div>
+
+	<div id="deletar" class="fundo fade">
+		<div id="box">
+			<h2>Deletar o usuario '${cliente.usuario}' <i class="fa fa-question"></i></h2>
+			<p>
+			<a href="Controle?acao=deletar&idCliente=${cliente.idCliente}" class="button-error pure-button">Sim</a> <a href="#" class="pure-button">Não</a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>

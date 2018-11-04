@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tabela de Cores</title>
+	<style>
+		body {
+			color: white;
+			background: black;
+			text-align: center;
+			margin: 0;
+			font-family: sans-serif;
+			font-size: 14px;
+			text-shadow: 0px 0px 5px black;
+		}
+		main {
+			position: absolute;
+			width: 90%;
+			left: 5%;
+			top: 5%;
+			right: 5%;
+		}
+		div.coluna {
+			float: left;
+			width: 6.66%;
+		}
+		div.block {
+			height: 50px;
+			width: 100%;
+			padding-top: 30px;
+    		word-break: keep-all;
+		}
+		div.block b.cor {
+			display: block;
+		}
+		div.block b.cod {
+			display: none;
+		}
+		div.block:hover {
+			transform: scale(2);
+			transition: 0.5s;
+		}
+		div.block:hover b.cor {
+			display: none;
+		}
+		div.block:hover b.cod {
+			display: block;
+			font-size: 10px;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<div class="coluna">
+			<div class="block" style="background-color:#212121;"><b class="cod">#212121</b></div>
+			<div class="block" style="background-color:#424242;"><b class="cod">#424242</b></div>
+			<div class="block" style="background-color:#616161;"><b class="cod">#616161</b></div>
+			<div class="block" style="background-color:#757575;"><b class="cod">#757575</b></div>
+			<div class="block" style="background-color:#9E9E9E;"><b class="cor">Grey</b><b class="cod">#9E9E9E</b></div>
+			<div class="block" style="background-color:#BDBDBD;"><b class="cod">#BDBDBD</b></div>
+			<div class="block" style="background-color:#E0E0E0;"><b class="cod">#E0E0E0</b></div>
+			<div class="block" style="background-color:#EEEEEE;"><b class="cod">#EEEEEE</b></div>
+			<div class="block" style="background-color:#F5F5F5;"><b class="cod">#F5F5F5</b></div>
+		</div>
+		<div class="coluna">
+			<div class="block" style="background-color:#263238;"><b class="cod">#263238</b></div>
+			<div class="block" style="background-color:#37474F;"><b class="cod">#37474F</b></div>
+			<div class="block" style="background-color:#455A64;"><b class="cod">#455A64</b></div>
+			<div class="block" style="background-color:#546E7A;"><b class="cod">#546E7A</b></div>
+			<div class="block" style="background-color:#607D8B;"><b class="cor">Blue Grey</b><b class="cod">#607D8B</b></div>
+			<div class="block" style="background-color:#78909C;"><b class="cod">#78909C</b></div>
+			<div class="block" style="background-color:#90A4AE;"><b class="cod">#90A4AE</b></div>
+			<div class="block" style="background-color:#B0BEC5;"><b class="cod">#B0BEC5</b></div>
+			<div class="block" style="background-color:#CFD8DC;"><b class="cod">#CFD8DC</b></div>
+		</div>
+		<div class="coluna">
+			<div class="block" style="background-color:#004D40;"><b class="cod">#004D40</b></div>
+			<div class="block" style="background-color:#00695C;"><b class="cod">#00695C</b></div>
+			<div class="block" style="background-color:#00796B;"><b class="cod">#00796B</b></div>
+			<div class="block" style="background-color:#00897B;"><b class="cod">#00897B</b></div>
+			<div class="block" style="background-color:#009688;"><b class="cor">Teal</b><b class="cod">#009688</b></div>
+			<div class="block" style="background-color:#26A69A;"><b class="cod">#26A69A</b></div>
+			<div class="block" style="background-color:#4DB6AC;"><b class="cod">#4DB6AC</b></div>
+			<div class="block" style="background-color:#80CBC4;"><b class="cod">#80CBC4</b></div>
+			<div class="block" style="background-color:#B2DFDB;"><b class="cod">#B2DFDB</b></div>
+		</div>
+		<div class="coluna">
+			<div class="block" style="background-color:#006064;"><b class="cod">#006064</b></div>
+			<div class="block" style="background-color:#00838F;"><b class="cod">#00838F</b></div>
+			<div class="block" style="background-color:#0097A7;"><b class="cod">#0097A7</b></div>
+			<div class="block" style="background-color:#00ACC1;"><b class="cod">#00ACC1</b></div>
+			<div class="block" style="background-color:#00BCD4;"><b class="cor">Cyan</b><b class="cod">#00BCD4</b></div>
+			<div class="block" style="background-color:#26C6DA;"><b class="cod">#26C6DA</b></div>
+			<div class="block" style="background-color:#4DD0E1;"><b class="cod">#4DD0E1</b></div>
+			<div class="block" style="background-color:#80DEEA;"><b class="cod">#80DEEA</b></div>
+			<div class="block" style="background-color:#B2EBF2;"><b class="cod">#B2EBF2</b></div>
+		</div>
+		<div class="coluna">
+			<div class="block" style="background-color:#01579B;"><b class="cod">#01579B</b></div>
+			<div class="block" style="background-color:#0277BD;"><b class="cod">#0277BD</b></div>
+			<div class="block" style="background-color:#0288D1;"><b class="cod">#0288D1</b></div>
+			<div class="block" style="background-color:#039BE5;"><b class="cod">#039BE5</b></div>
+			<div class="block" style="background-color:#03A9F4;"><b class="cor">Light Blue</b><b class="cod">#03A9F4</b></div>
+			<div class="block" style="background-color:#29B6F6;"><b class="cod">#29B6F6</b></div>
+			<div class="block" style="background-color:#4FC3F7;"><b class="cod">#4FC3F7</b></div>
+			<div class="block" style="background-color:#81D4FA;"><b class="cod">#81D4FA</b></div>
+			<div class="block" style="background-color:#B3E5FC;"><b class="cod">#B3E5FC</b></div>
+		</div>
+		<div class="coluna">
+			<div class="block" style="background-color:#0D47A1;"><b class="cod">#0D47A1</b></div>
+			<div class="block" style="background-color:#1565C0;"><b class="cod">#1565C0</b></div>
+			<div class="block" style="background-color:#1976D2;"><b class="cod">#1976D2</b></div>
+			<div class="block" style="background-color:#1E88E5;"><b class="cod">#1E88E5</b></div>
+			<div class="block" style="background-color:#2196F3;"><b class="cor">Blue</b><b class="cod">#2196F3</b></div>
+			<div class="block" style="background-color:#42A5F5;"><b class="cod">#42A5F5</b></div>
+			<div class="block" style="background-color:#64B5F6;"><b class="cod">#64B5F6</b></div>
+			<div class="block" style="background-color:#90CAF9;"><b class="cod">#90CAF9</b></div>
+			<div class="block" style="background-color:#BBDEFB;"><b class="cod">#BBDEFB</b></div>
+		</div>
+		<div class="coluna">
+			<div class="block" style="background-color:#1A237E;"><b class="cod">#1A237E</b></div>
+			<div class="block" style="background-color:#283593;"><b class="cod">#283593</b></div>
+			<div class="block" style="background-color:#303F9F;"><b class="cod">#303F9F</b></div>
+			<div class="block" style="background-color:#3949AB;"><b class="cod">#3949AB</b></div>
+			<div class="block" style="background-color:#3F51B5;"><b class="cor">Indigo</b><b class="cod">#3F51B5</b></div>
+			<div class="block" style="background-color:#5C6BC0;"><b class="cod">#5C6BC0</b></div>
+			<div class="block" style="background-color:#7986CB;"><b class="cod">#7986CB</b></div>
+			<div class="block" style="background-color:#9FA8DA;"><b class="cod">#9FA8DA</b></div>
+			<div class="block" style="background-color:#C5CAE9;"><b class="cod">#C5CAE9</b></div>
+		</div>
+		<div class="coluna">
+			<div class="block" style="background-color:#3E2723;"><b class="cod">#3E2723</b></div>
+			<div class="block" style="background-color:#4E342E;"><b class="cod">#4E342E</b></div>
+			<div class="block" style="background-color:#5D4037;"><b class="cod">#5D4037</b></div>
+			<div class="block" style="background-color:#6D4C41;"><b class="cod">#6D4C41</b></div>
+			<div class="block" style="background-color:#795548;"><b class="cor">Brown</b><b class="cod">#795548</b></div>
+			<div class="block" style="background-color:#8D6E63;"><b class="cod">#8D6E63</b></div>
+			<div class="block" style="background-color:#A1887F;"><b class="cod">#A1887F</b></div>
+			<div class="block" style="background-color:#BCAAA4;"><b class="cod">#BCAAA4</b></div>
+			<div class="block" style="background-color:#D7CCC8;"><b class="cod">#D7CCC8</b></div>
+		</div>
+		<div class="coluna">
+			<div class="block" style="background-color:#4A148C;"><b class="cod">#4A148C</b></div>
+			<div class="block" style="background-color:#6A1B9A;"><b class="cod">#6A1B9A</b></div>
+			<div class="block" style="background-color:#7B1FA2;"><b class="cod">#7B1FA2</b></div>
+			<div class="block" style="background-color:#8E24AA;"><b class="cod">#8E24AA</b></div>
+			<div class="block" style="background-color:#9C27B0;"><b class="cor">Purple</b><b class="cod">#9C27B0</b></div>
+			<div class="block" style="background-color:#AB47BC;"><b class="cod">#AB47BC</b></div>
+			<div class="block" style="background-color:#BA68C8;"><b class="cod">#BA68C8</b></div>
+			<div class="block" style="background-color:#CE93D8;"><b class="cod">#CE93D8</b></div>
+			<div class="block" style="background-color:#E1BEE7;"><b class="cod">#E1BEE7</b></div>
+		</div>
+		<div class="coluna">
+			<div class="block" style="background-color:#880E4F;"><b class="cod">#880E4F</b></div>
+			<div class="block" style="background-color:#AD1457;"><b class="cod">#AD1457</b></div>
+			<div class="block" style="background-color:#C2185B;"><b class="cod">#C2185B</b></div>
+			<div class="block" style="background-color:#D81B60;"><b class="cod">#D81B60</b></div>
+			<div class="block" style="background-color:#E91E63;"><b class="cor">Pink</b><b class="cod">#E91E63</b></div>
+			<div class="block" style="background-color:#EC407A;"><b class="cod">#EC407A</b></div>
+			<div class="block" style="background-color:#F06292;"><b class="cod">#F06292</b></div>
+			<div class="block" style="background-color:#F48FB1;"><b class="cod">#F48FB1</b></div>
+			<div class="block" style="background-color:#F8BBD0;"><b class="cod">#F8BBD0</b></div>
+		</div>
+		<div class="coluna">
+			<div class="block" style="background-color:#B71C1C;"><b class="cod">#B71C1C</b></div>
+			<div class="block" style="background-color:#C62828;"><b class="cod">#C62828</b></div>
+			<div class="block" style="background-color:#D32F2F;"><b class="cod">#D32F2F</b></div>
+			<div class="block" style="background-color:#E53935;"><b class="cod">#E53935</b></div>
+			<div class="block" style="background-color:#F44336;"><b class="cor">Red</b><b class="cod">#F44336</b></div>
+			<div class="block" style="background-color:#EF5350;"><b class="cod">#EF5350</b></div>
+			<div class="block" style="background-color:#E57373;"><b class="cod">#E57373</b></div>
+			<div class="block" style="background-color:#EF9A9A;"><b class="cod">#EF9A9A</b></div>
+			<div class="block" style="background-color:#FFCDD2;"><b class="cod">#FFCDD2</b></div>
+		</div>
+		<div class="coluna">
+			<div class="block" style="background-color:#E65100;"><b class="cod">#E65100</b></div>
+			<div class="block" style="background-color:#EF6C00;"><b class="cod">#EF6C00</b></div>
+			<div class="block" style="background-color:#F57C00;"><b class="cod">#F57C00</b></div>
+			<div class="block" style="background-color:#FB8C00;"><b class="cod">#FB8C00</b></div>
+			<div class="block" style="background-color:#FF9800;"><b class="cor">Orange</b><b class="cod">#FF9800</b></div>
+			<div class="block" style="background-color:#FFA726;"><b class="cod">#FFA726</b></div>
+			<div class="block" style="background-color:#FFB74D;"><b class="cod">#FFB74D</b></div>
+			<div class="block" style="background-color:#FFCC80;"><b class="cod">#FFCC80</b></div>
+			<div class="block" style="background-color:#FFE0B2;"><b class="cod">#FFE0B2</b></div>
+		</div>
+		<div class="coluna">
+			<div class="block" style="background-color:#F57F17;"><b class="cod">#F57F17</b></div>
+			<div class="block" style="background-color:#F9A825;"><b class="cod">#F9A825</b></div>
+			<div class="block" style="background-color:#FBC02D;"><b class="cod">#FBC02D</b></div>
+			<div class="block" style="background-color:#FDD835;"><b class="cod">#FDD835</b></div>
+			<div class="block" style="background-color:#FFEB3B;"><b class="cor">Yellow</b><b class="cod">#FFEB3B</b></div>
+			<div class="block" style="background-color:#FFEE58;"><b class="cod">#FFEE58</b></div>
+			<div class="block" style="background-color:#FFF176;"><b class="cod">#FFF176</b></div>
+			<div class="block" style="background-color:#FFF59D;"><b class="cod">#FFF59D</b></div>
+			<div class="block" style="background-color:#FFF9C4;"><b class="cod">#FFF9C4</b></div>
+		</div>
+		<div class="coluna">
+			<div class="block" style="background-color:#33691E;"><b class="cod">#33691E</b></div>
+			<div class="block" style="background-color:#558B2F;"><b class="cod">#558B2F</b></div>
+			<div class="block" style="background-color:#689F38;"><b class="cod">#689F38</b></div>
+			<div class="block" style="background-color:#7CB342;"><b class="cod">#7CB342</b></div>
+			<div class="block" style="background-color:#8BC34A;"><b class="cor">Light Green</b><b class="cod">#8BC34A</b></div>
+			<div class="block" style="background-color:#9CCC65;"><b class="cod">#9CCC65</b></div>
+			<div class="block" style="background-color:#AED581;"><b class="cod">#AED581</b></div>
+			<div class="block" style="background-color:#C5E1A5;"><b class="cod">#C5E1A5</b></div>
+			<div class="block" style="background-color:#DCEDC8;"><b class="cod">#DCEDC8</b></div>
+		</div>
+		<div class="coluna">
+			<div class="block" style="background-color:#1B5E20;"><b class="cod">#1B5E20</b></div>
+			<div class="block" style="background-color:#2E7D32;"><b class="cod">#2E7D32</b></div>
+			<div class="block" style="background-color:#388E3C;"><b class="cod">#388E3C</b></div>
+			<div class="block" style="background-color:#43A047;"><b class="cod">#43A047</b></div>
+			<div class="block" style="background-color:#4CAF50;"><b class="cor">Green</b><b class="cod">#4CAF50</b></div>
+			<div class="block" style="background-color:#66BB6A;"><b class="cod">#66BB6A</b></div>
+			<div class="block" style="background-color:#81C784;"><b class="cod">#81C784</b></div>
+			<div class="block" style="background-color:#A5D6A7;"><b class="cod">#A5D6A7</b></div>
+			<div class="block" style="background-color:#C8E6C9;"><b class="cod">#C8E6C9</b></div>
+		</div>
+	</main>
+</body>
+</html> 

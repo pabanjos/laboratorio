@@ -1,0 +1,28 @@
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	border: 1px solid black;
+}
+
+input {
+	width: 70%;
+}
+
+header {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+header a {
+	color: blue;
+	text-decoration: none;
+	padding: 10px;
+	background: none;
+}
+
+header a:hover {
+	background: lightblue;
+}

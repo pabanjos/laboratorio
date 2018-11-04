@@ -1,0 +1,163 @@
+<style type="text/css">
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+background: #4EB889;
+font-family: Nunito, arial, verdana;
+}
+
+#accordian {
+background: #455A64;
+width: 100%;
+margin: 50px auto 0 auto;
+color: white;
+}
+
+#accordian h3 {
+background: #263238;
+background: linear-gradient(#003040, #002535);
+}
+
+#accordian h3 a {
+padding: 0 10px;
+font-size: 12px;
+line-height: 34px;
+display: block;
+color: white;
+text-decoration: none;
+}
+
+#accordian h3 a:hover {
+background: #37474F;
+}
+
+i {
+margin-right: 10px;
+}
+
+#accordian li {
+list-style-type: none;
+}
+
+#accordian ul ul li a,
+#accordian h4 {
+color: white;
+text-decoration: none;
+font-size: 11px;
+line-height: 27px;
+display: block;
+padding: 0 15px;
+transition: all 0.15s;
+position: relative;
+}
+
+#accordian ul ul li a:hover {
+background: #546E7A;
+border-left: 5px solid white;
+}
+
+#accordian ul ul {
+display: none;
+}
+
+#accordian li.active>ul {
+display: block;
+}
+
+#accordian ul ul ul {
+margin-left: 15px;
+border-left: 1px solid white;
+}
+
+#accordian a:not(:only-child):after {
+content: "\f067";
+font-family: fontawesome;
+position: absolute;
+right: 10px;
+top: 0;
+font-size: 14px;
+}
+
+#accordian .active>a:not(:only-child):after {
+content: "\f068";
+}
+</style>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+$("#accordian a").click(function() {
+var link = $(this);
+var closest_ul = link.closest("ul");
+var parallel_active_links = closest_ul.find(".active")
+var closest_li = link.closest("li");
+var link_status = closest_li.hasClass("active");
+var count = 0;
+
+closest_ul.find("ul").slideUp(function() {
+if (++count == closest_ul.find("ul").length)
+parallel_active_links.removeClass("active");
+});
+
+if (!link_status) {
+closest_li.children("ul").slideDown();
+closest_li.addClass("active");
+}
+})
+})
+</script>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Nunito">
+<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+<div id="accordian">
+	<ul>
+		<li class="active">
+			<h3><a href="#">Conteúdo Básico</a></h3>
+			<ul>
+				<li><a href="#">Resident Evil Games</a></li>
+				<li><a href="#">Files Traduzidos</a></li>
+				<li><a href="#">Perfis de Personagens</a></li>
+				<li><a href="#">Criaturas e B.O.W.s</a></li>
+				<li><a href="#">Guias e Tutoriais</a></li>
+				<li><a href="#">Overdues</a>
+					<ul>
+						<li><a href="#">Today's tasks</a></li>
+						<li><a href="#">Urgent</a></li>
+						<li><a href="#">Overdues</a></li>
+						<li><a href="#">Overdues</a>
+							<ul>
+								<li><a href="#">Today's tasks</a></li>
+								<li><a href="#">Urgent</a></li>
+								<li><a href="#">Overdues</a></li>
+								<li><a href="#">Recurring</a></li>
+								<li><a href="#">Settings</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Settings</a></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<h3><a href="#">Conteúdo Especial</a></h3>
+			<ul>
+				<li><a href="#">Acervo de Entrevistas</a></li>
+				<li><a href="#">Análises e Previews</a></li>
+				<li><a href="#"> Universo dos Filmes</a></li>
+				<li><a href="#"> Linha do Tempo (Cronologia)</a></li>
+				<li><a href="#"> Matérias Especiais</a></li>
+			</ul>
+		</li>
+		<li>
+			<h3><a href="#">Livros Traduzidos</a></h3>
+			<ul>
+				<li><a href="#">True Story Behind Biohazard</a></li>
+				<li><a href="#">Resident Evil Archives Vol. I</a></li>
+				<li><a href="#">Resident Evil Archives Vol. II</a></li>
+				<li><a href="#">Resident Evil 5 Declassified</a></li>
+				<li><a href="#">Shattered Memoirs (RETDC)</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>

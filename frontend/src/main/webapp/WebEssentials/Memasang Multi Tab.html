@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <style type="text/css">
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+a:link {
+  text-decoration: none;
+  outline: none;
+  transition: all 0.25s;
+}
+
+a:visited,
+a:link:hover,
+a:visited:hover {
+  text-decoration: none;
+}
+
+body {
+  background: #eaeaea none repeat scroll top left;
+  color: #444;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  line-height: normal;
+}
+
+.container {
+  background: #fff;
+  max-width: 320px;
+  margin: 5% auto;
+  padding: 10px;
+  box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#sidebar-tab h2 {
+  display: none;
+}
+
+#select-tab {
+  margin: 0 auto 10px
+}
+
+#select-tab,
+#select-tab li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow: hidden
+}
+
+#select-tab li {
+  float: left;
+  width: 33.3%;
+  text-align: center
+}
+
+#select-tab a {
+  line-height: 42px;
+  display: block;
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#select-tab .selected a,
+#select-tab a:hover {
+  background-color: #f44243
+}
+
+#sidebar-main .widget1 {
+  background-color: #fafafa;
+  width: 100%;
+  float: left;
+  padding: 5px 0
+}
+
+#sidebar-main {
+  overflow: hidden
+}
+  </style>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript">
+$(function() {
+  $("#select-tab li:first").addClass("selected");
+  $("#sidebar-main > div").hide();
+  $("#sidebar-main > div:first").show();
+  $("#select-tab a").click(function() {
+    $("#select-tab li").removeClass("selected");
+    $(this).parent().addClass("selected");
+    var a = $(this).attr("href");
+    $("#sidebar-main > div:visible").hide();
+    $(a).fadeToggle(1000);
+    return false
+  })
+});
+  </script>
+</head>
+<body>
+  <div class="container">
+<div id='sidebar-tab'>
+  <div id='tab'>
+    <div class='tab-widget-menu clear'>
+      <ul id='select-tab'>
+        <li class='tab1'><a href='#tab1'>Popular</a></li>
+        <li class='tab2'><a href='#tab2'>Comments</a></li>
+        <li class='tab3'><a href='#tab3'>Archive</a></li>
+      </ul>
+    </div>
+    <div id='sidebar-main'>
+      <div class='widget1' id='tab1'>
+        <b:section class='sidebar' id='tab1-popular-posts' showaddelement='yes'><p>Isi konten widget tab 1
+          </br>
+          </br>
+          Bisa sobat isi dengan widget apa saja, misal widget popular post, label, arsip, dll.</br>
+          </br>
+          Donec at dolor mi. Pellentesque sit amet ornare risus. Fusce varius ut turpis sed semper. In ut est et enim gravida interdum nec id quam.</br>
+          </br> Aliquam leo ante, posuere id suscipit et, varius quis metus.</br>
+          </br>
+          Aenean tincidunt pellentesque facilisis. Aliquam leo ante, posuere id suscipit et, varius quis metus.</p></b:section>
+      </div>
+      <div class='widget1' id='tab2'>
+        <b:section class='sidebar' id='tab2-comments-posts' showaddelement='yes'><p>Isi konten widget tab 2
+          </br>
+          </br>
+          Bisa sobat isi dengan widget apa saja, misal widget popular post, label, arsip, dll.</br>
+          </br>
+          Donec at dolor mi. Pellentesque sit amet ornare risus. Fusce varius ut turpis sed semper. In ut est et enim gravida interdum nec id quam.</br>
+          </br> Aliquam leo ante, posuere id suscipit et, varius quis metus.</br>
+          </br>
+          Aenean tincidunt pellentesque facilisis. Aliquam leo ante, posuere id suscipit et, varius quis metus.</p></b:section>
+      </div>
+      <div class='widget1' id='tab3'>
+        <b:section class='sidebar' id='tab4-srchive' showaddelement='yes'><p>Isi konten widget tab 3
+          </br>
+          </br>
+          Bisa sobat isi dengan widget apa saja, misal widget popular post, label, arsip, dll.</br>
+          </br>
+          Donec at dolor mi. Pellentesque sit amet ornare risus. Fusce varius ut turpis sed semper. In ut est et enim gravida interdum nec id quam.</br>
+          </br> Aliquam leo ante, posuere id suscipit et, varius quis metus.</br>
+          </br>
+          Aenean tincidunt pellentesque facilisis. Aliquam leo ante, posuere id suscipit et, varius quis metus.</p></b:section>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</body>
+</html>

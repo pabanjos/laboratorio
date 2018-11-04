@@ -1,0 +1,98 @@
+* {
+	font-family: sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #0D47A1;
+}
+
+body {
+	margin: 0;
+}
+
+img {
+	width: 50%;
+}
+
+header {
+	width: 100%;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+header a {
+	display: inline-block;
+	color: blue;
+	padding: 10px;
+	margin: 5px;
+	background: none;
+	box-shadow: inset 0px 0px 1px blue;
+}
+
+header a:hover {
+	background: lightblue;
+}
+
+div#saida {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+
+#keyword1, #keyword2 {
+	width: 100%;
+}
+
+#keyword3 {
+	width: 85%;
+}
+
+div#left {
+	float: left;
+}
+
+div#right {
+	float: right;
+}
+
+fieldset {
+	margin-bottom: 30px;
+}
+
+table {
+	width: 100%;
+	border: 1px solid gray;
+	border-spacing: 1pt;
+	border: 1px solid black;
+}
+
+table thead th, table tfoot th {
+	background: #64B5F6;
+}
+
+tfoot a {
+	padding: 4px 10px;
+	background: blue;
+	color: white;
+}
+
+table th, table td {
+	padding: 0.5%;
+}
+
+table tr {
+	border-bottom: 1px solid gray;
+}
+
+table tr:hover {
+	background: #BBDEFB;
+}
+
+input, select, button {
+	padding: 10px;
+}
+
+input[type="search"] {
+	width: 100%;
+}

@@ -13,7 +13,7 @@
   </modules>
   
   <build>
-  	<finalName>teste</finalName>
+  	<finalName>lab</finalName>
     <pluginManagement>
       
       <plugins>

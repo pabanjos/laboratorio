@@ -1,8 +1,9 @@
-package teste;
+package threads;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.*;
 
 public class Principal {
@@ -20,8 +21,14 @@ public class Principal {
     }
 
     public static void main(final String[] args) {
+        try {
+            System.out.println("working..");
+            TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 //      System.out.println("Núcleos: " + ForkJoinPool.getCommonPoolParallelism());
-        testarConcorrencia();
+//        testarConcorrencia();
 //      testarMapa();
 //      testarMemoria();
     }
@@ -76,6 +83,7 @@ public class Principal {
         map.put("7", "7");
         map.put("8", "8");
         map.put("9", "9");
+        map.put("10", "10");
         map.put("11", "11");
         map.put("22", "22");
         map.put("33", "33");
@@ -97,11 +105,11 @@ public class Principal {
 
     private static void testarMemoria() {
         long inicio = System.currentTimeMillis();
-        List<Teste> lista = new ArrayList<>();
+        List<Item> lista = new ArrayList<>();
         int cont = 0;
         try {
             for (int i = 0; i < 1000000; i++) {
-                lista.add(new Teste(i));
+                lista.add(new Item(i));
                 cont = i;
             }
         } catch (Exception e) {
@@ -110,5 +118,41 @@ public class Principal {
         System.out.println(cont);
         long fim = System.currentTimeMillis();
         System.out.println((fim - inicio) / 1000.0);
+    }
+}
+
+class Item {
+    private int id;
+
+    @Override
+    public String toString() {
+        return "Teste{" +
+                "id=" + id +
+                '}';
+    }
+
+    public Item(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Item item = (Item) o;
+        return id == item.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

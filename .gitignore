@@ -1,1 +1,9 @@
 *.class
+*.lst
+*.iml
+
+outros/target/*
+outros/frontend/*
+outros/tecnologias/*
+.idea
+.settings

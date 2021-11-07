@@ -12,6 +12,7 @@
         <module>transacao</module>
         <module>frontend</module>
         <module>designpattern</module>
+        <module>docker</module>
     </modules>
 
     <build>

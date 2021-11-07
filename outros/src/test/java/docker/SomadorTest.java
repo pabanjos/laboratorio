@@ -1,6 +1,7 @@
 package docker;
 
 import org.junit.Test;
+import teste.Somador;
 
 import static org.junit.Assert.assertEquals;
 

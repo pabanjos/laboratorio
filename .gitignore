@@ -1,9 +1,3 @@
-*.class
-*.lst
-*.iml
-
-outros/target/*
-outros/frontend/*
-outros/transacao/*
 .idea
-.settings
+*.iml
+*/target/*

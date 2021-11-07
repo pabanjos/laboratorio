@@ -1,5 +1,3 @@
-package threads;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -8,7 +6,6 @@ import java.util.concurrent.*;
 
 public class Principal {
 
-    private static final ScheduledExecutorService executor = Executors.newScheduledThreadPool(8);
     private static final Runnable run = () -> System.out.println(Thread.currentThread().getName());
 
     private static String call() {
@@ -21,16 +18,10 @@ public class Principal {
     }
 
     public static void main(final String[] args) {
-        try {
-            System.out.println("working..");
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-//      System.out.println("Núcleos: " + ForkJoinPool.getCommonPoolParallelism());
-//        testarConcorrencia();
-//      testarMapa();
-//      testarMemoria();
+        System.out.println("Núcleos: " + ForkJoinPool.getCommonPoolParallelism());
+        testarConcorrencia();
+        testarMapa();
+//        testarMemoria();
     }
 
     private static void testarConcorrencia() {
@@ -53,6 +44,7 @@ public class Principal {
         final Callable<String> t15 = Principal::call;
         final Callable<String> t16 = Principal::call;
         final List<Callable<String>> list = Arrays.asList(t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16);
+        ScheduledExecutorService executor = Executors.newScheduledThreadPool(8);
         try {
             final List<Future<String>> lista = executor.invokeAll(list);
             lista.forEach(item -> {
@@ -90,7 +82,8 @@ public class Principal {
         map.put("44", "44");
         map.put("55", "55");
         map.put("66", "66");
-        final Runnable r1 = () -> map.forEach(1, (key, value) -> System.out.printf("key: %s; value: %s; thread: %s\n", //
+        ScheduledExecutorService executor = Executors.newScheduledThreadPool(8);
+        final Runnable r1 = () -> map.forEach(4, (key, value) -> System.out.printf("key: %s; value: %s; thread: %s\n", //
                 key, value, call()));
         final Future<?> valor = executor.submit(r1);
         try {
@@ -124,15 +117,15 @@ public class Principal {
 class Item {
     private int id;
 
+    public Item(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "Teste{" +
                 "id=" + id +
                 '}';
-    }
-
-    public Item(int id) {
-        this.id = id;
     }
 
     @Override

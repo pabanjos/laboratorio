@@ -13,6 +13,7 @@
         <module>frontend</module>
         <module>designpattern</module>
         <module>docker</module>
+        <module>concorrencia</module>
     </modules>
 
     <build>
